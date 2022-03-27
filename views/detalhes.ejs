@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes</title>
+    <link rel="stylesheet" href="/css/detalhes.css" type="text/css">
+</head>
+<body>
+    <header>
+        <div id="header-area">
+            <a id="logo" href="/">
+                <img src="./assets/icons/pokeball.png" alt="">
+                <h2>Pokédex</h2>
+            </a>
+        </div>
+        <div id="header-bar"></div>
+    </header>
+
+    <main id="main">
+
+        <% pokemonAtual.forEach(element => { %>
+            <div id="cards">
+
+                <div id="card-left">
+                    <div id="card-left-header">
+                        <p><%= element.num %></p>
+                    </div>
+                    <div id="card-left-img">
+                        <img src="<%= element.img %>" alt="<%= element.name %>">
+                    </div>
+                    <div id="card-left-name">
+                        <h2><%= element.name %></h2>
+                    </div>
+                </div>
+    
+                <div id="card-right">
+
+                    <div id="card-right-header">
+                        <img src="/assets/icons/sun.png" alt="">
+                        <h2>Feature</h2>
+                    </div>
+
+                    <div id="card-right-main">
+                        <div class="card-feature">
+                            <h3>Height:</h3>
+                            <p><%= element.height %></p>
+                        </div>
+                        <div class="card-feature">
+                            <h3>Weight:</p></h3>
+                            <p><%= element.weight %>
+                        </div>
+                        <div class="card-feature">
+                            <h3>Type:</h3>
+                            <p><%= element.type %></p>
+                        </div>
+                        <div class="card-feature">
+                            <h3>Weaknesses:</h3>
+                            <p><%= element.weaknesses %></p>
+                        </div>
+                        <div class="card-feature">
+                            <h3>Id:</h3>
+                            <p><%= element.id%></p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        <% }) %>
+        
+        <div id="description">
+            <div id="description-text">
+                <h1>Description</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus nemo expedita beatae quidem! Enim eum dolorem laboriosam, facilis iste, labore molestias, accusantium at sequi velit itaque porro optio quae voluptate?</p>
+            </div>
+        </div>
+    
+    </main>
+</body>
+</html>
